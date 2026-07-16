@@ -1,0 +1,28 @@
+summary: ROCm base CMake package discovery
+test: ./test.sh
+tag:
+  - functional
+  - rocm-base
+  - gpu-less
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/rocm-base/test_rocm_base_cmake_discovery
+require:
+  - cmake
+  - gcc
+  - gcc-c++
+  - make
+  - rocm-cmake
+  - rocm-device-libs
+  - rocm-comgr-devel
+  - rocr-runtime-devel
+  - rocm-hip-devel
+  - rocprofiler-register-devel
+  - rocblas-devel
+  - hipblas-common-devel
+  - hipblas-devel
+  - rocsolver-devel
+  - rocsparse-devel
+  - rocprim-devel
+  - coreutils
+  - beakerlib
