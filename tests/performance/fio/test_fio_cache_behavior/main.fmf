@@ -1,7 +1,7 @@
-summary: Performance test - fio - linesiscomparison (Direct I/O vs Buffered)
-test: ./test.sh
-tag: [performance, fio]
-duration: 5m
-tier: 2
-path: /tests/performance/fio/test_fio_cache_behavior
-require: [fio, beakerlib]
+summary: Performance test - fio - linesiscomparison (Direct I/O vs Buffered)
+test: ./test.sh
+tag: [performance, fio]
+duration: 5m
+tier: 2
+path: /tests/performance/fio/test_fio_cache_behavior
+require: [fio, beakerlib]

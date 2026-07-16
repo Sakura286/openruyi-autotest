@@ -1,11 +1,11 @@
-summary: Functional test - weston - postcheck
-test: ./test.sh
-tag:
- - functional
- - weston
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/weston/test_weston_backend_check
-require:
- - weston
+summary: Functional test - weston - postcheck
+test: ./test.sh
+tag:
+ - functional
+ - weston
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/weston/test_weston_backend_check
+require:
+ - weston
  - beakerlib

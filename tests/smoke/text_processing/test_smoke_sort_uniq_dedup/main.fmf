@@ -1,15 +1,15 @@
-summary: Smoke test - sort 
-test: ./test.sh
-tag:
- - smoke
- - text_processing
-duration: 1m
-tier: 0
-path: /tests/smoke/text_processing/test_smoke_sort_uniq_dedup
-require:
- - beakerlib
- - gawk
- - coreutils
- - findutils
- - grep
- - sed
+summary: Smoke test - sort 
+test: ./test.sh
+tag:
+ - smoke
+ - text_processing
+duration: 1m
+tier: 0
+path: /tests/smoke/text_processing/test_smoke_sort_uniq_dedup
+require:
+ - beakerlib
+ - gawk
+ - coreutils
+ - findutils
+ - grep
+ - sed

@@ -1,11 +1,11 @@
-summary: Functional test - cmake - basicCMakeitems
-test: ./test.sh
-tag:
- - functional
- - cmake
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/cmake/test_cmake_basic_cmake_project
-require:
- - cmake
+summary: Functional test - cmake - basicCMakeitems
+test: ./test.sh
+tag:
+ - functional
+ - cmake
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/cmake/test_cmake_basic_cmake_project
+require:
+ - cmake
  - beakerlib

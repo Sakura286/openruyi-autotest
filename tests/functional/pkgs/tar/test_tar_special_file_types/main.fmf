@@ -1,11 +1,11 @@
-summary: Functional test - tar - filetype
-test: ./test.sh
-tag:
- - functional
- - tar
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/tar/test_tar_special_file_types
-require:
- - tar
+summary: Functional test - tar - filetype
+test: ./test.sh
+tag:
+ - functional
+ - tar
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/tar/test_tar_special_file_types
+require:
+ - tar
  - beakerlib

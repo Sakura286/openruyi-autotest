@@ -1,11 +1,11 @@
-summary: Functional test - tmux - loadedandconfiguration
-test: ./test.sh
-tag:
- - functional
- - tmux
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/tmux/test_tmux_source_and_configuration
-require:
- - tmux
+summary: Functional test - tmux - loadedandconfiguration
+test: ./test.sh
+tag:
+ - functional
+ - tmux
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/tmux/test_tmux_source_and_configuration
+require:
+ - tmux
  - beakerlib

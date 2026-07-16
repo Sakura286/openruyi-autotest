@@ -1,11 +1,11 @@
-summary: Functional test - rpmbuild - andtestRPM
-test: ./test.sh
-tag:
- - functional
- - rpmbuild
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/rpmbuild/test_rpmbuild_install_and_test_rpm
-require:
- - rpmbuild
+summary: Functional test - rpmbuild - andtestRPM
+test: ./test.sh
+tag:
+ - functional
+ - rpmbuild
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/rpmbuild/test_rpmbuild_install_and_test_rpm
+require:
+ - rpmbuild
  - beakerlib

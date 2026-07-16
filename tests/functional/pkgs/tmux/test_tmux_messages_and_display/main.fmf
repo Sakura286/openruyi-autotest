@@ -1,11 +1,11 @@
-summary: Functional test - tmux - anddisplay
-test: ./test.sh
-tag:
- - functional
- - tmux
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/tmux/test_tmux_messages_and_display
-require:
- - tmux
+summary: Functional test - tmux - anddisplay
+test: ./test.sh
+tag:
+ - functional
+ - tmux
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/tmux/test_tmux_messages_and_display
+require:
+ - tmux
  - beakerlib

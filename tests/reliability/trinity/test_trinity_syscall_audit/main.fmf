@@ -1,7 +1,7 @@
-summary: Reliability test - trinity - system callsandtype
-test: ./test.sh
-tag: [reliability, trinity]
-duration: 3m
-tier: 2
-path: /tests/reliability/trinity/test_trinity_syscall_audit
-require: [trinity, beakerlib]
+summary: Reliability test - trinity - system callsandtype
+test: ./test.sh
+tag: [reliability, trinity]
+duration: 3m
+tier: 2
+path: /tests/reliability/trinity/test_trinity_syscall_audit
+require: [trinity, beakerlib]

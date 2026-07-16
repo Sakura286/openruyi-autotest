@@ -1,11 +1,11 @@
-summary: Functional test - rpmbuild - createsinglespecfile
-test: ./test.sh
-tag:
- - functional
- - rpmbuild
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/rpmbuild/test_rpmbuild_create_simple_spec_file
-require:
- - rpmbuild
+summary: Functional test - rpmbuild - createsinglespecfile
+test: ./test.sh
+tag:
+ - functional
+ - rpmbuild
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/rpmbuild/test_rpmbuild_create_simple_spec_file
+require:
+ - rpmbuild
  - beakerlib

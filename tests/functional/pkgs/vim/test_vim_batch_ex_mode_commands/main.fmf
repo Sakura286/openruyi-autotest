@@ -1,11 +1,11 @@
-summary: Functional test - vim - /exmodecommand
-test: ./test.sh
-tag:
- - functional
- - vim
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/vim/test_vim_batch_ex_mode_commands
-require:
- - vim
+summary: Functional test - vim - /exmodecommand
+test: ./test.sh
+tag:
+ - functional
+ - vim
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/vim/test_vim_batch_ex_mode_commands
+require:
+ - vim
  - beakerlib

@@ -1,14 +1,14 @@
-summary: Functional test - yarpgen - source codebuildand
-test: ./test.sh
-tag:
- - functional
- - compiler
- - yarpgen
-duration: 10m
-tier: 2
-path: /tests/functional/compiler/yarpgen/test_yarpgen_build
-require:
- - gcc-c++
- - cmake
- - git
- - beakerlib
+summary: Functional test - yarpgen - source codebuildand
+test: ./test.sh
+tag:
+ - functional
+ - compiler
+ - yarpgen
+duration: 10m
+tier: 2
+path: /tests/functional/compiler/yarpgen/test_yarpgen_build
+require:
+ - gcc-c++
+ - cmake
+ - git
+ - beakerlib

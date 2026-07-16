@@ -1,7 +1,7 @@
-summary: Performance test - fio - readwriteload (datalibrary)
-test: ./test.sh
-tag: [performance, fio]
-duration: 5m
-tier: 2
-path: /tests/performance/fio/test_fio_mixed_workload
-require: [fio, beakerlib]
+summary: Performance test - fio - readwriteload (datalibrary)
+test: ./test.sh
+tag: [performance, fio]
+duration: 5m
+tier: 2
+path: /tests/performance/fio/test_fio_mixed_workload
+require: [fio, beakerlib]

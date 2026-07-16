@@ -1,12 +1,12 @@
-summary: Security test - OpenSCAP CIS - andreport
-test: ./test.sh
-tag:
- - security
- - openscap
- - cis
-duration: 10m
-tier: 2
-path: /tests/security/openscap/cis/test_openscap_cis_eval_report
-require:
- - scap-security-guide
+summary: Security test - OpenSCAP CIS - andreport
+test: ./test.sh
+tag:
+ - security
+ - openscap
+ - cis
+duration: 10m
+tier: 2
+path: /tests/security/openscap/cis/test_openscap_cis_eval_report
+require:
+ - scap-security-guide
  - beakerlib

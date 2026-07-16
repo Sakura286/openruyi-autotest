@@ -1,13 +1,13 @@
-summary: Smoke test - cat readandfile
-test: ./test.sh
-tag:
- - smoke
- - filesystem
-duration: 1m
-tier: 0
-path: /tests/smoke/filesystem/test_smoke_cat_read_file
-require:
- - beakerlib
- - coreutils
- - file
- - diffutils
+summary: Smoke test - cat readandfile
+test: ./test.sh
+tag:
+ - smoke
+ - filesystem
+duration: 1m
+tier: 0
+path: /tests/smoke/filesystem/test_smoke_cat_read_file
+require:
+ - beakerlib
+ - coreutils
+ - file
+ - diffutils

@@ -1,7 +1,7 @@
-summary: Functional test - dejagnu - warning (-Wall/-Wextra/-Werror/-pedantic)
-test: ./test.sh
-tag: [functional, compiler, dejagnu]
-duration: 5m
-tier: 2
-path: /tests/functional/compiler/dejagnu/test_dejagnu_warnings
-require: [dejagnu, gcc, clang, beakerlib]
+summary: Functional test - dejagnu - warning (-Wall/-Wextra/-Werror/-pedantic)
+test: ./test.sh
+tag: [functional, compiler, dejagnu]
+duration: 5m
+tier: 2
+path: /tests/functional/compiler/dejagnu/test_dejagnu_warnings
+require: [dejagnu, gcc, clang, beakerlib]

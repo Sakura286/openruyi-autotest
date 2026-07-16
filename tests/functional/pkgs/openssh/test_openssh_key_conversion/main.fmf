@@ -1,11 +1,11 @@
-summary: Functional test - openssh - key format
-test: ./test.sh
-tag:
- - functional
- - openssh
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/openssh/test_openssh_key_conversion
-require:
- - openssh
+summary: Functional test - openssh - key format
+test: ./test.sh
+tag:
+ - functional
+ - openssh
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/openssh/test_openssh_key_conversion
+require:
+ - openssh
  - beakerlib

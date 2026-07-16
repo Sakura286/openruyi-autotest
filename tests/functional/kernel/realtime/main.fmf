@@ -1,11 +1,11 @@
-summary: Functional test - kernel - LTP test
-tag:
- - functional
- - kernel
- - realtime
- - ltp
-duration: 30m
-tier: 1
-path: /tests/functional/kernel/realtime
-require:
- - beakerlib
+summary: Functional test - kernel - LTP test
+tag:
+ - functional
+ - kernel
+ - realtime
+ - ltp
+duration: 30m
+tier: 1
+path: /tests/functional/kernel/realtime
+require:
+ - beakerlib

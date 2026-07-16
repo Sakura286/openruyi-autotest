@@ -1,11 +1,11 @@
-summary: Functional test - cloud-utils-growpart partition expansion - retryrun(noactual)
-test: ./test.sh
-tag:
- - functional
- - cloud-utils-growpart
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/cloud-utils-growpart/test_cloud_utils_growpart_dry_run__no_actual_resize
-require:
- - cloud-utils-growpart
+summary: Functional test - cloud-utils-growpart partition expansion - retryrun(noactual)
+test: ./test.sh
+tag:
+ - functional
+ - cloud-utils-growpart
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/cloud-utils-growpart/test_cloud_utils_growpart_dry_run__no_actual_resize
+require:
+ - cloud-utils-growpart
  - beakerlib

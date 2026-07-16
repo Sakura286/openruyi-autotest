@@ -1,10 +1,10 @@
-summary: Functional test - weston Waylandfunctionality verification
-tag:
- - functional
- - weston
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/weston
-require:
- - weston
- - beakerlib
+summary: Functional test - weston Waylandfunctionality verification
+tag:
+ - functional
+ - weston
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/weston
+require:
+ - weston
+ - beakerlib

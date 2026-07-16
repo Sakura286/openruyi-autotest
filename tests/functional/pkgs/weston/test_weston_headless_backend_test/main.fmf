@@ -1,11 +1,11 @@
-summary: Functional test - weston - noheaderposttest
-test: ./test.sh
-tag:
- - functional
- - weston
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/weston/test_weston_headless_backend_test
-require:
- - weston
+summary: Functional test - weston - noheaderposttest
+test: ./test.sh
+tag:
+ - functional
+ - weston
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/weston/test_weston_headless_backend_test
+require:
+ - weston
  - beakerlib

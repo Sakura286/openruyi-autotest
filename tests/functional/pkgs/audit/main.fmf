@@ -1,10 +1,10 @@
-summary: Functional test - audit system
-tag:
- - functional
- - audit
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/audit
-require:
- - audit
- - beakerlib
+summary: Functional test - audit system
+tag:
+ - functional
+ - audit
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/audit
+require:
+ - audit
+ - beakerlib

@@ -1,10 +1,10 @@
-summary: Functional test - PAM module
-tag:
- - functional
- - pam
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/pam
-require:
- - pam
- - beakerlib
+summary: Functional test - PAM module
+tag:
+ - functional
+ - pam
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/pam
+require:
+ - pam
+ - beakerlib

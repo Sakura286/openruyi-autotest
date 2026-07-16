@@ -1,11 +1,11 @@
-summary: Functional test - vim - andreplace(exmode)
-test: ./test.sh
-tag:
- - functional
- - vim
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/vim/test_vim_search_and_replace__ex_mode
-require:
- - vim
+summary: Functional test - vim - andreplace(exmode)
+test: ./test.sh
+tag:
+ - functional
+ - vim
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/vim/test_vim_search_and_replace__ex_mode
+require:
+ - vim
  - beakerlib

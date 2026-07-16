@@ -1,11 +1,11 @@
-summary: Smoke test - env listexportenvironment variables
-test: ./test.sh
-tag:
- - smoke
- - scripting
-duration: 1m
-tier: 0
-path: /tests/smoke/scripting/test_smoke_env_variables
-require:
- - beakerlib
- - coreutils
+summary: Smoke test - env listexportenvironment variables
+test: ./test.sh
+tag:
+ - smoke
+ - scripting
+duration: 1m
+tier: 0
+path: /tests/smoke/scripting/test_smoke_env_variables
+require:
+ - beakerlib
+ - coreutils

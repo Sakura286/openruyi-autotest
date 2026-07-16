@@ -1,13 +1,13 @@
-summary: Performance test - UnixBench integertest
-test: ./test.sh
-tag:
- - performance
- - unixbench
-duration: 10m
-tier: 2
-path: /tests/performance/unixbench/test_unixbench_integer_only
-require:
- - beakerlib
- - gcc
- - make
- - perl
+summary: Performance test - UnixBench integertest
+test: ./test.sh
+tag:
+ - performance
+ - unixbench
+duration: 10m
+tier: 2
+path: /tests/performance/unixbench/test_unixbench_integer_only
+require:
+ - beakerlib
+ - gcc
+ - make
+ - perl

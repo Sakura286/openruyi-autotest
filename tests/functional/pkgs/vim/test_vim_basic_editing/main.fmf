@@ -1,11 +1,11 @@
-summary: Functional test - vim - basic
-test: ./test.sh
-tag:
- - functional
- - vim
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/vim/test_vim_basic_editing
-require:
- - vim
+summary: Functional test - vim - basic
+test: ./test.sh
+tag:
+ - functional
+ - vim
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/vim/test_vim_basic_editing
+require:
+ - vim
  - beakerlib

@@ -1,7 +1,7 @@
-summary: Performance test - stream - countgroupsizevsbandwidth
-test: ./test.sh
-tag: [performance, stream]
-duration: 10m
-tier: 2
-path: /tests/performance/stream/test_stream_array_size
-require: [gcc, beakerlib]
+summary: Performance test - stream - countgroupsizevsbandwidth
+test: ./test.sh
+tag: [performance, stream]
+duration: 10m
+tier: 2
+path: /tests/performance/stream/test_stream_array_size
+require: [gcc, beakerlib]

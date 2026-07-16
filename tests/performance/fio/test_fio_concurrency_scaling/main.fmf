@@ -1,7 +1,7 @@
-summary: Performance test - fio - and
-test: ./test.sh
-tag: [performance, fio]
-duration: 5m
-tier: 2
-path: /tests/performance/fio/test_fio_concurrency_scaling
-require: [fio, beakerlib]
+summary: Performance test - fio - and
+test: ./test.sh
+tag: [performance, fio]
+duration: 5m
+tier: 2
+path: /tests/performance/fio/test_fio_concurrency_scaling
+require: [fio, beakerlib]

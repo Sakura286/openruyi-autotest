@@ -1,10 +1,10 @@
-summary: Functional test - ISL integerlibrary
-tag:
- - functional
- - isl
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/isl
-require:
- - isl
- - beakerlib
+summary: Functional test - ISL integerlibrary
+tag:
+ - functional
+ - isl
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/isl
+require:
+ - isl
+ - beakerlib

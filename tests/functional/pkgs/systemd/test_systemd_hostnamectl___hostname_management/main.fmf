@@ -1,11 +1,11 @@
-summary: Functional test - systemd - hostnamectl - hostname
-test: ./test.sh
-tag:
- - functional
- - systemd
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/systemd/test_systemd_hostnamectl___hostname_management
-require:
- - systemd
+summary: Functional test - systemd - hostnamectl - hostname
+test: ./test.sh
+tag:
+ - functional
+ - systemd
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/systemd/test_systemd_hostnamectl___hostname_management
+require:
+ - systemd
  - beakerlib

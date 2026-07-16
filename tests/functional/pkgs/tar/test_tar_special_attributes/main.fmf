@@ -1,11 +1,11 @@
-summary: Functional test - tar - attribute
-test: ./test.sh
-tag:
- - functional
- - tar
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/tar/test_tar_special_attributes
-require:
- - tar
+summary: Functional test - tar - attribute
+test: ./test.sh
+tag:
+ - functional
+ - tar
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/tar/test_tar_special_attributes
+require:
+ - tar
  - beakerlib

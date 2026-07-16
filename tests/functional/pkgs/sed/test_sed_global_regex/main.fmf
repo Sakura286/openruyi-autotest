@@ -1,11 +1,11 @@
-summary: Functional test - sed - and
-test: ./test.sh
-tag:
- - functional
- - sed
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/sed/test_sed_global_regex
-require:
- - sed
+summary: Functional test - sed - and
+test: ./test.sh
+tag:
+ - functional
+ - sed
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/sed/test_sed_global_regex
+require:
+ - sed
  - beakerlib

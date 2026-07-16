@@ -1,11 +1,11 @@
-summary: Functional test - python - module
-test: ./test.sh
-tag:
- - functional
- - python
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/python/test_python_module_import
-require:
- - python
+summary: Functional test - python - module
+test: ./test.sh
+tag:
+ - functional
+ - python
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/python/test_python_module_import
+require:
+ - python
  - beakerlib

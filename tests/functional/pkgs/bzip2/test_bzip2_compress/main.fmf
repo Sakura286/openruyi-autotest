@@ -1,11 +1,11 @@
-summary: Functional test - bzip2 - compress
-test: ./test.sh
-tag:
- - functional
- - bzip2
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/bzip2/test_bzip2_compress
-
-require:
- - beakerlib
+summary: Functional test - bzip2 - compress
+test: ./test.sh
+tag:
+ - functional
+ - bzip2
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/bzip2/test_bzip2_compress
+
+require:
+ - beakerlib

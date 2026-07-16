@@ -1,13 +1,13 @@
-summary: Functional test - Jotai programcompiletest
-tag:
- - functional
- - compiler
- - jotai
-duration: 15m
-tier: 2
-path: /tests/functional/compiler/jotai
-require:
- - beakerlib
- - gcc
- - clang
- - git
+summary: Functional test - Jotai programcompiletest
+tag:
+ - functional
+ - compiler
+ - jotai
+duration: 15m
+tier: 2
+path: /tests/functional/compiler/jotai
+require:
+ - beakerlib
+ - gcc
+ - clang
+ - git

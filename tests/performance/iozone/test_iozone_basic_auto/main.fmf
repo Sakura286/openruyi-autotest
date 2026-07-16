@@ -1,7 +1,7 @@
-summary: Performance test - iozone - mode (-a)
-test: ./test.sh
-tag: [performance, iozone]
-duration: 5m
-tier: 2
-path: /tests/performance/iozone/test_iozone_basic_auto
-require: [iozone, beakerlib]
+summary: Performance test - iozone - mode (-a)
+test: ./test.sh
+tag: [performance, iozone]
+duration: 5m
+tier: 2
+path: /tests/performance/iozone/test_iozone_basic_auto
+require: [iozone, beakerlib]

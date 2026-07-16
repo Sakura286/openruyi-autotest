@@ -1,14 +1,14 @@
-summary: Functional test - jotai - Environmentandrepolibrary
-test: ./test.sh
-tag:
- - functional
- - compiler
- - jotai
-duration: 5m
-tier: 2
-path: /tests/functional/compiler/jotai/test_jotai_setup
-require:
- - gcc
- - clang
- - git
- - beakerlib
+summary: Functional test - jotai - Environmentandrepolibrary
+test: ./test.sh
+tag:
+ - functional
+ - compiler
+ - jotai
+duration: 5m
+tier: 2
+path: /tests/functional/compiler/jotai/test_jotai_setup
+require:
+ - gcc
+ - clang
+ - git
+ - beakerlib

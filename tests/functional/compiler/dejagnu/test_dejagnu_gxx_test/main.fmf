@@ -1,13 +1,13 @@
-summary: Functional test - dejagnu - G++ compiletestwith
-test: ./test.sh
-tag:
- - functional
- - compiler
- - dejagnu
-duration: 10m
-tier: 2
-path: /tests/functional/compiler/dejagnu/test_dejagnu_gxx_test
-require:
- - dejagnu
- - gcc-c++
- - beakerlib
+summary: Functional test - dejagnu - G++ compiletestwith
+test: ./test.sh
+tag:
+ - functional
+ - compiler
+ - dejagnu
+duration: 10m
+tier: 2
+path: /tests/functional/compiler/dejagnu/test_dejagnu_gxx_test
+require:
+ - dejagnu
+ - gcc-c++
+ - beakerlib

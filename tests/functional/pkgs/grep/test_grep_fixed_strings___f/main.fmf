@@ -1,11 +1,11 @@
-summary: Functional test - grep - fixed stringsextract f
-test: ./test.sh
-tag:
- - functional
- - grep
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/grep/test_grep_fixed_strings___f
-require:
- - grep
+summary: Functional test - grep - fixed stringsextract f
+test: ./test.sh
+tag:
+ - functional
+ - grep
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/grep/test_grep_fixed_strings___f
+require:
+ - grep
  - beakerlib

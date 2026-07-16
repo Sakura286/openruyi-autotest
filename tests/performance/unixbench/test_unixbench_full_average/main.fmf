@@ -1,13 +1,13 @@
-summary: Performance test - UnixBench multithreadfullbenchmark (3independent runs)
-test: ./test.sh
-tag:
- - performance
- - unixbench
-duration: 30m
-tier: 2
-path: /tests/performance/unixbench/test_unixbench_full_average
-require:
- - beakerlib
- - gcc
- - make
+summary: Performance test - UnixBench multithreadfullbenchmark (3independent runs)
+test: ./test.sh
+tag:
+ - performance
+ - unixbench
+duration: 30m
+tier: 2
+path: /tests/performance/unixbench/test_unixbench_full_average
+require:
+ - beakerlib
+ - gcc
+ - make
  - perl

@@ -1,11 +1,11 @@
-summary: Security test - nmap NSE script
-test: ./test.sh
-tag:
- - security
- - nmap
-duration: 2m
-tier: 1
-path: /tests/security/nmap/test_nmap_nse_scripts
-require:
- - beakerlib
- - nmap
+summary: Security test - nmap NSE script
+test: ./test.sh
+tag:
+ - security
+ - nmap
+duration: 2m
+tier: 1
+path: /tests/security/nmap/test_nmap_nse_scripts
+require:
+ - beakerlib
+ - nmap

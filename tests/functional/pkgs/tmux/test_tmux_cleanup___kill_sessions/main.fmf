@@ -1,11 +1,11 @@
-summary: Functional test - tmux - Cleanup-terminatewill
-test: ./test.sh
-tag:
- - functional
- - tmux
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/tmux/test_tmux_cleanup___kill_sessions
-require:
- - tmux
+summary: Functional test - tmux - Cleanup-terminatewill
+test: ./test.sh
+tag:
+ - functional
+ - tmux
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/tmux/test_tmux_cleanup___kill_sessions
+require:
+ - tmux
  - beakerlib

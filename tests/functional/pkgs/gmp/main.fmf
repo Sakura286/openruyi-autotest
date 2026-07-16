@@ -1,10 +1,10 @@
-summary: Functional test - GMP countlibrary
-tag:
- - functional
- - gmp
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/gmp
-require:
- - gmp
- - beakerlib
+summary: Functional test - GMP countlibrary
+tag:
+ - functional
+ - gmp
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/gmp
+require:
+ - gmp
+ - beakerlib

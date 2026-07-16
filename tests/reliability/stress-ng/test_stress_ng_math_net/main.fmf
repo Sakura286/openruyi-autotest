@@ -1,7 +1,7 @@
-summary: Reliability test - stress-ng - count/networkstress (matrix/netdev)
-test: ./test.sh
-tag: [reliability, stress-ng]
-duration: 5m
-tier: 2
-path: /tests/reliability/stress-ng/test_stress_ng_math_net
-require: [stress-ng, beakerlib]
+summary: Reliability test - stress-ng - count/networkstress (matrix/netdev)
+test: ./test.sh
+tag: [reliability, stress-ng]
+duration: 5m
+tier: 2
+path: /tests/reliability/stress-ng/test_stress_ng_math_net
+require: [stress-ng, beakerlib]

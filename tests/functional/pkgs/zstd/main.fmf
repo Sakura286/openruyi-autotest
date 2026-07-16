@@ -1,10 +1,10 @@
-summary: Functional test - zstd compress
-tag:
- - functional
- - zstd
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/zstd
-require:
- - zstd
- - beakerlib
+summary: Functional test - zstd compress
+tag:
+ - functional
+ - zstd
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/zstd
+require:
+ - zstd
+ - beakerlib

@@ -1,10 +1,10 @@
-summary: Functional test - newt/whiptail vs
-tag:
- - functional
- - newt
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/newt
-require:
- - newt
- - beakerlib
+summary: Functional test - newt/whiptail vs
+tag:
+ - functional
+ - newt
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/newt
+require:
+ - newt
+ - beakerlib

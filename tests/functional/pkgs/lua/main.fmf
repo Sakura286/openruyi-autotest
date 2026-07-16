@@ -1,10 +1,10 @@
-summary: Functional test - Lua script
-tag:
- - functional
- - lua
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/lua
-require:
- - lua
- - beakerlib
+summary: Functional test - Lua script
+tag:
+ - functional
+ - lua
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/lua
+require:
+ - lua
+ - beakerlib

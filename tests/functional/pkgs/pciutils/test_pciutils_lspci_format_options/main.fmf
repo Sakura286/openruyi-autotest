@@ -1,11 +1,11 @@
-summary: Functional test - pciutils - lspci format-ize option handling
-test: ./test.sh
-tag:
- - functional
- - pciutils
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/pciutils/test_pciutils_lspci_format_options
-require:
- - pciutils
+summary: Functional test - pciutils - lspci format-ize option handling
+test: ./test.sh
+tag:
+ - functional
+ - pciutils
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/pciutils/test_pciutils_lspci_format_options
+require:
+ - pciutils
  - beakerlib

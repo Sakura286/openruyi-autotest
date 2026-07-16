@@ -1,7 +1,7 @@
-summary: Functional test - yarpgen - multifileseparate compilation + C/C++ link
-test: ./test.sh
-tag: [functional, compiler, yarpgen]
-duration: 5m
-tier: 2
-path: /tests/functional/compiler/yarpgen/test_yarpgen_multifile
-require: [gcc, gcc-c++, clang, beakerlib]
+summary: Functional test - yarpgen - multifileseparate compilation + C/C++ link
+test: ./test.sh
+tag: [functional, compiler, yarpgen]
+duration: 5m
+tier: 2
+path: /tests/functional/compiler/yarpgen/test_yarpgen_multifile
+require: [gcc, gcc-c++, clang, beakerlib]

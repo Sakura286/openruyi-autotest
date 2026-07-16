@@ -1,11 +1,11 @@
-summary: Functional test - systemd - journalctl - log
-test: ./test.sh
-tag:
- - functional
- - systemd
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/systemd/test_systemd_journalctl___journal_query
-require:
- - systemd
+summary: Functional test - systemd - journalctl - log
+test: ./test.sh
+tag:
+ - functional
+ - systemd
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/systemd/test_systemd_journalctl___journal_query
+require:
+ - systemd
  - beakerlib

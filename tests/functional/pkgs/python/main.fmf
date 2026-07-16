@@ -1,10 +1,10 @@
-summary: Functional test - Python 
-tag:
- - functional
- - python
-duration: 5m
-tier: 1
-path: /tests/functional/pkgs/python
-require:
- - python3
- - beakerlib
+summary: Functional test - Python 
+tag:
+ - functional
+ - python
+duration: 5m
+tier: 1
+path: /tests/functional/pkgs/python
+require:
+ - python3
+ - beakerlib

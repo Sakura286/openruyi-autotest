@@ -1,10 +1,10 @@
-summary: Security test - OpenSCAP securitytest
-tag:
- - security
- - openscap
-duration: 10m
-tier: 2
-path: /tests/security/openscap
-require:
- - beakerlib
+summary: Security test - OpenSCAP securitytest
+tag:
+ - security
+ - openscap
+duration: 10m
+tier: 2
+path: /tests/security/openscap
+require:
+ - beakerlib
  - scap-security-guide

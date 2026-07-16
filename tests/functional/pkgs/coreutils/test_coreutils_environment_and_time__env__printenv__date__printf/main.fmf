@@ -1,11 +1,11 @@
-summary: Functional test - coreutils - environment variables and time env printenv printf
-test: ./test.sh
-tag:
- - functional
- - coreutils
-duration: 2m
-tier: 1
-path: /tests/functional/pkgs/coreutils/test_coreutils_environment_and_time__env__printenv__date__printf
-require:
- - coreutils
+summary: Functional test - coreutils - environment variables and time env printenv printf
+test: ./test.sh
+tag:
+ - functional
+ - coreutils
+duration: 2m
+tier: 1
+path: /tests/functional/pkgs/coreutils/test_coreutils_environment_and_time__env__printenv__date__printf
+require:
+ - coreutils
  - beakerlib

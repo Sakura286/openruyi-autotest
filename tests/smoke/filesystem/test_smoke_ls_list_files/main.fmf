@@ -1,13 +1,13 @@
-summary: Smoke test - ls listexportfileanddirectory
-test: ./test.sh
-tag:
- - smoke
- - filesystem
-duration: 1m
-tier: 0
-path: /tests/smoke/filesystem/test_smoke_ls_list_files
-require:
- - beakerlib
- - coreutils
- - file
- - diffutils
+summary: Smoke test - ls listexportfileanddirectory
+test: ./test.sh
+tag:
+ - smoke
+ - filesystem
+duration: 1m
+tier: 0
+path: /tests/smoke/filesystem/test_smoke_ls_list_files
+require:
+ - beakerlib
+ - coreutils
+ - file
+ - diffutils

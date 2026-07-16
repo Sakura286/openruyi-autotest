@@ -1,11 +1,11 @@
-summary: Smoke test - chown setall
-test: ./test.sh
-tag:
- - smoke
- - permissions
-duration: 1m
-tier: 0
-path: /tests/smoke/permissions/test_smoke_chown_ownership
-require:
- - beakerlib
- - coreutils
+summary: Smoke test - chown setall
+test: ./test.sh
+tag:
+ - smoke
+ - permissions
+duration: 1m
+tier: 0
+path: /tests/smoke/permissions/test_smoke_chown_ownership
+require:
+ - beakerlib
+ - coreutils

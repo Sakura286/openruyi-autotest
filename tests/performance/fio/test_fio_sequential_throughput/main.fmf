@@ -1,7 +1,7 @@
-summary: Performance test - fio - sequential readwrite
-test: ./test.sh
-tag: [performance, fio]
-duration: 5m
-tier: 2
-path: /tests/performance/fio/test_fio_sequential_throughput
-require: [fio, beakerlib]
+summary: Performance test - fio - sequential readwrite
+test: ./test.sh
+tag: [performance, fio]
+duration: 5m
+tier: 2
+path: /tests/performance/fio/test_fio_sequential_throughput
+require: [fio, beakerlib]
