@@ -1,0 +1,12 @@
+summary: ROCm functional tests requiring a single AMD GPU
+tag:
+  - functional
+  - rocm-gpu
+  - gpu
+  - single-gpu
+duration: 20m
+tier: 1
+path: /tests/functional/pkgs/rocm-gpu
+require:
+  - coreutils
+  - beakerlib
