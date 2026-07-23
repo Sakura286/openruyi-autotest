@@ -24,4 +24,6 @@ require:
   - coreutils
   - glibc
   - grep
+  - perl-File-Which
+  - perl-URI
   - beakerlib
