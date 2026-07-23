@@ -1,0 +1,16 @@
+summary: Run ROCm Bandwidth Test on a single AMD GPU
+test: ./test.sh
+framework: beakerlib
+tag:
+  - functional
+  - rocm-gpu
+  - gpu
+  - single-gpu
+duration: 10m
+tier: 1
+path: /tests/functional/pkgs/rocm-gpu/test_rocm_gpu_bandwidth
+require:
+  - rocm-bandwidth-test
+  - coreutils
+  - grep
+  - beakerlib
