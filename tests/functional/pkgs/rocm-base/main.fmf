@@ -1,0 +1,11 @@
+summary: ROCm base functional tests without a GPU
+tag:
+  - functional
+  - rocm-base
+  - gpu-less
+duration: 10m
+tier: 1
+path: /tests/functional/pkgs/rocm-base
+require:
+  - coreutils
+  - beakerlib

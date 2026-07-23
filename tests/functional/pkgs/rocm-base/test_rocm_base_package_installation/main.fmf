@@ -1,0 +1,44 @@
+summary: ROCm base package installation
+test: ./test.sh
+tag:
+  - functional
+  - rocm-base
+  - gpu-less
+duration: 10m
+tier: 1
+path: /tests/functional/pkgs/rocm-base/test_rocm_base_package_installation
+require:
+  - gcc-c++
+  - cmake
+  - pciutils
+  - rocm-cmake
+  - hipcc
+  - rocm-device-libs
+  - rocm-comgr
+  - rocm-comgr-devel
+  - rocm-llvm-macros
+  - rocr-runtime
+  - rocr-runtime-devel
+  - rocm-hip
+  - rocm-hip-devel
+  - rocminfo
+  - rocm-smi
+  - rocm-smi-devel
+  - rocprofiler-register
+  - rocprofiler-register-devel
+  - rocblas
+  - rocblas-devel
+  - hipblas-common-devel
+  - hipblas
+  - hipblas-devel
+  - rocsolver
+  - rocsolver-devel
+  - rocsparse
+  - rocsparse-devel
+  - rocprim-devel
+  - hipify
+  - rocm-bandwidth-test
+  - python-tensile
+  - coreutils
+  - rpm
+  - beakerlib
