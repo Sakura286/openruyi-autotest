@@ -1,5 +1,6 @@
 summary: ROCm base HIPIFY command line tools
 test: ./test.sh
+framework: beakerlib
 tag:
   - functional
   - rocm-base

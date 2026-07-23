@@ -1,5 +1,6 @@
 summary: ROCm base HIP offline compilation
 test: ./test.sh
+framework: beakerlib
 tag:
   - functional
   - rocm-base

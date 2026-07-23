@@ -1,5 +1,6 @@
 summary: ROCm base package installation
 test: ./test.sh
+framework: beakerlib
 tag:
   - functional
   - rocm-base

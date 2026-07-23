@@ -1,5 +1,6 @@
 summary: ROCm base CMake package discovery
 test: ./test.sh
+framework: beakerlib
 tag:
   - functional
   - rocm-base
