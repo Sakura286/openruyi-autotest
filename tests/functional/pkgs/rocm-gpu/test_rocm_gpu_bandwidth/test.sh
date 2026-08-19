@@ -1,30 +1,31 @@
 #!/bin/bash
-# Functional test: run ROCm Bandwidth Test with exactly one AMD GPU.
+# Test ROCm bandwidth on one AMD GPU.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
+. "$(dirname "$0")/../lib.sh"
 
 rlJournalStart
-    rlPhaseStartSetup "Prepare bandwidth test output"
+    rlPhaseStartSetup "Environment setup"
+        rocmGpuSetup
         TmpDir=$(mktemp -d)
-        rlRun "test -r /dev/kfd && test -w /dev/kfd" 0 \
-            "Check that the test user can access the KFD device"
+        rlRun "test -r /dev/kfd && test -w /dev/kfd" 0 "Check KFD access"
     rlPhaseEnd
 
     rlPhaseStartTest "Run ROCm Bandwidth Test"
-        rlRun "rocm-bandwidth-test > '$TmpDir/bandwidth.txt' 2>&1" 0 \
-            "Measure data paths involving the GPU"
-        rlRun "cat '$TmpDir/bandwidth.txt'" 0 "Print bandwidth test output"
-        rlRun "test -s '$TmpDir/bandwidth.txt'" 0 "Check that bandwidth output is not empty"
-        rlRun "grep -o 'GPU-[[:xdigit:]]\\+' '$TmpDir/bandwidth.txt' | sort -u > '$TmpDir/gpus.txt'" 0 \
-            "Collect unique GPU identifiers"
-        rlRun "test \"\$(wc -l < '$TmpDir/gpus.txt')\" -eq 1" 0 \
-            "Check that the bandwidth test reports exactly one GPU"
-        rlAssertGrep "Device:" "$TmpDir/bandwidth.txt"
-        rlAssertNotGrep "No subcommand provided" "$TmpDir/bandwidth.txt"
-        rlAssertNotGrep "Error:" "$TmpDir/bandwidth.txt"
+        rlRun "rocm-bandwidth-test > bandwidth.txt 2>&1" 0 \
+            "Run bandwidth test"
+        rlRun "cat bandwidth.txt" 0 "Print bandwidth output"
+        rlRun "test -s bandwidth.txt" 0 "Check for bandwidth output"
+        rlRun "grep -o 'GPU-[[:xdigit:]]\\+' bandwidth.txt | sort -u > gpus.txt" 0 \
+            "Find GPU identifiers"
+        rlRun "test \"\$(wc -l < gpus.txt)\" -eq 1" 0 \
+            "Check for one GPU"
+        rlAssertGrep "Device:" bandwidth.txt
+        rlAssertNotGrep "No subcommand provided" bandwidth.txt
+        rlAssertNotGrep "Error:" bandwidth.txt
     rlPhaseEnd
 
-    rlPhaseStartCleanup "Remove bandwidth test output"
+    rlPhaseStartCleanup "Clean up test environment"
         if [ -n "$TmpDir" ] && [ -d "$TmpDir" ]; then
             rlRun "rm -rf '$TmpDir'" 0 "Remove temporary files"
         fi

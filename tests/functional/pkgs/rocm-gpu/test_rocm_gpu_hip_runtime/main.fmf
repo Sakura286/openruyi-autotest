@@ -1,6 +1,5 @@
 summary: Compile and run a HIP program on a single AMD GPU
 test: ./test.sh
-framework: beakerlib
 tag:
   - functional
   - rocm-gpu
@@ -8,7 +7,6 @@ tag:
   - single-gpu
 duration: 10m
 tier: 1
-path: /tests/functional/pkgs/rocm-gpu/test_rocm_gpu_hip_runtime
 require:
   - gcc-c++
   - hipcc

@@ -1,13 +1,11 @@
 summary: ROCm base Tensile command line tools
 test: ./test.sh
-framework: beakerlib
 tag:
   - functional
   - rocm-base
   - gpu-less
 duration: 2m
 tier: 1
-path: /tests/functional/pkgs/rocm-base/test_rocm_base_tensile
 require:
   - python3
   - python-tensile

@@ -1,13 +1,11 @@
 summary: ROCm base CMake package discovery
 test: ./test.sh
-framework: beakerlib
 tag:
   - functional
   - rocm-base
   - gpu-less
 duration: 5m
 tier: 1
-path: /tests/functional/pkgs/rocm-base/test_rocm_base_cmake_discovery
 require:
   - cmake
   - gcc

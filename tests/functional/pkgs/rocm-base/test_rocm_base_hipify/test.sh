@@ -1,10 +1,12 @@
 #!/bin/bash
-# Functional test: translate CUDA API names with HIPIFY without a CUDA SDK.
+# Functional test: translate CUDA APIs with HIPIFY.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
+. "$(dirname "$0")/../lib.sh"
 
 rlJournalStart
-    rlPhaseStartSetup "Create HIPIFY input"
+    rlPhaseStartSetup "Environment setup"
+        rocmBaseSetup
         TmpDir=$(mktemp -d)
         rlRun "cd '$TmpDir'" 0 "Enter temporary directory"
         rlRun "printf '%s\\n' 'void f(int *a, const cudaDeviceProp *b) { cudaChooseDevice(a,b); }' > hipify-input.cu" 0 \
@@ -17,11 +19,11 @@ rlJournalStart
         rlAssertGrep "hipChooseDevice" "hipify-output.cpp"
 
         rlRun "hipify-clang --version > hipify-clang-version.txt 2>&1" 0 \
-            "Run the hipify-clang command entry point"
-        rlRun "test -s hipify-clang-version.txt" 0 "Check hipify-clang version output"
+            "Run hipify-clang"
+        rlRun "test -s hipify-clang-version.txt" 0 "Check version output"
     rlPhaseEnd
 
-    rlPhaseStartCleanup "Remove HIPIFY files"
+    rlPhaseStartCleanup "Clean up test environment"
         rlRun "cd /" 0 "Leave temporary directory"
         if [ -n "$TmpDir" ] && [ -d "$TmpDir" ]; then
             rlRun "rm -rf '$TmpDir'" 0 "Remove temporary files"
