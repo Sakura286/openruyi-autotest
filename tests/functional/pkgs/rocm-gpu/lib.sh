@@ -1,4 +1,7 @@
 # library-prefix = rocm-gpu
+#
+# Shared setup for the ROCm GPU test suite.
+# Install once and remove once across test cases.
 
 PKG_FLAG="/tmp/.beakerlib_rocm_gpu_suite"
 
@@ -15,12 +18,12 @@ ROCM_GPU_PACKAGES=(
 )
 
 rocmGpuSetup() {
-    local package
-    local -a missing=()
-
     if [ ! -f "$PKG_FLAG" ]; then
+        local missing=()
+        local package
+
         for package in "${ROCM_GPU_PACKAGES[@]}"; do
-            if ! rpm -q "$package" >/dev/null 2>&1; then
+            if ! rpm -q "$package" 2>/dev/null; then
                 missing+=("$package")
             fi
         done
@@ -35,13 +38,11 @@ rocmGpuSetup() {
             rlLogInfo "ROCm GPU dependencies are already installed"
         fi
 
-        {
-            printf 'installed=%s\n' "${missing[*]}"
-            printf 'ref=1\n'
-        } > "$PKG_FLAG"
+        echo "installed=${missing[*]}" > "$PKG_FLAG"
+        echo "ref=1" >> "$PKG_FLAG"
     else
         local ref
-        ref=$(sed -n 's/^ref=//p' "$PKG_FLAG")
+        ref=$(grep "^ref=" "$PKG_FLAG" | cut -d= -f2)
         ref=$((ref + 1))
         sed -i "s/^ref=.*/ref=$ref/" "$PKG_FLAG"
         rlLogInfo "ROCm GPU dependency reference count: $ref"
@@ -56,14 +57,14 @@ rocmGpuCleanup() {
     fi
 
     local ref
-    ref=$(sed -n 's/^ref=//p' "$PKG_FLAG")
+    ref=$(grep "^ref=" "$PKG_FLAG" | cut -d= -f2)
     ref=$((ref - 1))
 
     if [ "$ref" -le 0 ]; then
         local installed
-        installed=$(sed -n 's/^installed=//p' "$PKG_FLAG")
+        installed=$(grep "^installed=" "$PKG_FLAG" | cut -d= -f2)
         if [ -n "$installed" ]; then
-            echo "${TEST_SERVER_1_PASSWORD:-openruyi}" | sudo -S dnf remove -y $installed >/dev/null 2>&1 || true
+            echo "${TEST_SERVER_1_PASSWORD:-openruyi}" | sudo -S dnf remove -y $installed 2>/dev/null || true
             rlLogInfo "Removed ROCm GPU dependencies"
         fi
         rm -f "$PKG_FLAG"

@@ -8,6 +8,7 @@ rlJournalStart
     rlPhaseStartSetup "Environment setup"
         rocmGpuSetup
         TmpDir=$(mktemp -d)
+        rlRun "cd $TmpDir" 0
         rlRun "test -r /dev/kfd && test -w /dev/kfd" 0 "Check KFD access"
     rlPhaseEnd
 
@@ -26,8 +27,9 @@ rlJournalStart
     rlPhaseEnd
 
     rlPhaseStartCleanup "Clean up test environment"
+        rlRun "cd /" 0
         if [ -n "$TmpDir" ] && [ -d "$TmpDir" ]; then
-            rlRun "rm -rf '$TmpDir'" 0 "Remove temporary files"
+            rlRun "rm -rf $TmpDir" 0 "Remove temporary files"
         fi
     rlPhaseEnd
 

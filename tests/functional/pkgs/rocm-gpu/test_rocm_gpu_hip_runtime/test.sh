@@ -4,15 +4,13 @@
 . /usr/share/beakerlib/beakerlib.sh || exit 1
 . "$(dirname "$0")/../lib.sh"
 
-SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
         rocmGpuSetup
         TmpDir=$(mktemp -d)
-        rlRun "cp '$SCRIPT_DIR/vector_add.cpp' '$TmpDir/'" 0 \
+        rlRun "cp $(dirname "$0")/vector_add.cpp $TmpDir/" 0 \
             "Copy HIP source"
-        rlRun "cd '$TmpDir'" 0 "Enter temporary directory"
+        rlRun "cd $TmpDir" 0
         rlRun "rocminfo > rocminfo.txt 2>&1" 0 "Query GPU"
         rlRun "grep -E '^[[:space:]]*Name:[[:space:]]+gfx[0-9]+' rocminfo.txt | awk '{print \$2}' | sort -u > gpu-architectures.txt" 0 \
             "Find GPU architectures"
@@ -34,9 +32,9 @@ rlJournalStart
     rlPhaseEnd
 
     rlPhaseStartCleanup "Clean up test environment"
-        rlRun "cd /" 0 "Leave temporary directory"
+        rlRun "cd /" 0
         if [ -n "$TmpDir" ] && [ -d "$TmpDir" ]; then
-            rlRun "rm -rf '$TmpDir'" 0 "Remove temporary files"
+            rlRun "rm -rf $TmpDir" 0 "Remove temporary files"
         fi
     rlPhaseEnd
 
