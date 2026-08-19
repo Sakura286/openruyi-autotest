@@ -52,18 +52,18 @@ rocmBaseSetup() {
 
         if [ "${#missing[@]}" -gt 0 ]; then
             echo "${TEST_SERVER_1_PASSWORD:-openruyi}" | sudo -S dnf install -y "${missing[@]}" 2>/dev/null
-            printf 'installed=1\n' > "$PKG_FLAG"
+            echo "installed=1" > "$PKG_FLAG"
             printf 'packages=%s\n' "${missing[*]}" >> "$PKG_FLAG"
             rlLogInfo "Installed ROCm base packages"
         else
-            printf 'installed=0\n' > "$PKG_FLAG"
+            echo "installed=0" > "$PKG_FLAG"
             rlLogInfo "ROCm base packages already installed"
         fi
 
         echo "ref=1" >> "$PKG_FLAG"
     else
         local ref
-        ref=$(grep '^ref=' "$PKG_FLAG" | cut -d= -f2)
+        ref=$(grep "^ref=" "$PKG_FLAG" | cut -d= -f2)
         ref=$((ref + 1))
         sed -i "s/^ref=.*/ref=$ref/" "$PKG_FLAG"
         rlLogInfo "Reusing ROCm base packages; references: $ref"
@@ -78,11 +78,11 @@ rocmBaseCleanup() {
     fi
 
     local ref
-    ref=$(grep '^ref=' "$PKG_FLAG" | cut -d= -f2)
+    ref=$(grep "^ref=" "$PKG_FLAG" | cut -d= -f2)
     ref=$((ref - 1))
 
     if [ "$ref" -le 0 ]; then
-        if grep -q '^installed=1' "$PKG_FLAG"; then
+        if grep -q "^installed=1" "$PKG_FLAG"; then
             local installed_packages
             local packages=()
             installed_packages=$(sed -n 's/^packages=//p' "$PKG_FLAG")

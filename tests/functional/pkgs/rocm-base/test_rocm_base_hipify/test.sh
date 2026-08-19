@@ -8,7 +8,7 @@ rlJournalStart
     rlPhaseStartSetup "Environment setup"
         rocmBaseSetup
         TmpDir=$(mktemp -d)
-        rlRun "cd '$TmpDir'" 0 "Enter temporary directory"
+        rlRun "cd $TmpDir" 0 "Enter temporary directory"
         rlRun "printf '%s\\n' 'void f(int *a, const cudaDeviceProp *b) { cudaChooseDevice(a,b); }' > hipify-input.cu" 0 \
             "Create a minimal CUDA API input"
     rlPhaseEnd
@@ -26,7 +26,7 @@ rlJournalStart
     rlPhaseStartCleanup "Clean up test environment"
         rlRun "cd /" 0 "Leave temporary directory"
         if [ -n "$TmpDir" ] && [ -d "$TmpDir" ]; then
-            rlRun "rm -rf '$TmpDir'" 0 "Remove temporary files"
+            rlRun "rm -rf $TmpDir" 0 "Remove temporary files"
         fi
     rlPhaseEnd
 

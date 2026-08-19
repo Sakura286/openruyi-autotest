@@ -22,7 +22,7 @@ rlJournalStart
     rlPhaseStartCleanup "Clean up test environment"
         rlRun "cd /" 0
         if [ -n "$TmpDir" ] && [ -d "$TmpDir" ]; then
-            rlRun "rm -rf '$TmpDir'" 0 "Remove temporary files"
+            rlRun "rm -rf $TmpDir" 0 "Remove temporary files"
         fi
     rlPhaseEnd
 

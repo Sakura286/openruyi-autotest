@@ -4,15 +4,14 @@
 . /usr/share/beakerlib/beakerlib.sh || exit 1
 . "$(dirname "$0")/../lib.sh"
 
-SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 GPU_ARCHITECTURES=(gfx1100 gfx1201)
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
         rocmBaseSetup
         TmpDir=$(mktemp -d)
-        rlRun "cp '$SCRIPT_DIR/vector_add.cpp' '$TmpDir/'" 0 "Copy HIP source to temporary directory"
-        rlRun "cd '$TmpDir'" 0 "Enter temporary directory"
+        rlRun "cp $(dirname "$0")/vector_add.cpp $TmpDir/" 0 "Copy vector_add.cpp"
+        rlRun "cd $TmpDir" 0 "Enter temporary directory"
         rlRun "hipcc --version" 0 "Print hipcc version"
     rlPhaseEnd
 
@@ -40,7 +39,7 @@ rlJournalStart
     rlPhaseStartCleanup "Clean up test environment"
         rlRun "cd /" 0 "Leave temporary directory"
         if [ -n "$TmpDir" ] && [ -d "$TmpDir" ]; then
-            rlRun "rm -rf '$TmpDir'" 0 "Remove temporary files"
+            rlRun "rm -rf $TmpDir" 0 "Remove temporary files"
         fi
     rlPhaseEnd
 

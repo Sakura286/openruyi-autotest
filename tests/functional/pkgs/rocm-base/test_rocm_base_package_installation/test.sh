@@ -19,7 +19,7 @@ rlJournalStart
     rlPhaseEnd
 
     rlPhaseStartCleanup "Clean up test environment"
-        rlLogInfo "Shared library handles cleanup"
+        # ROCm base packages managed by lib.sh's reference counting auto-uninstall
     rlPhaseEnd
 
     rlJournalPrintText
