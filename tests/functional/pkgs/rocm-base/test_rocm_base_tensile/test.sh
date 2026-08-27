@@ -2,11 +2,9 @@
 # Functional test: validate GPU-independent Tensile tools.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
-. "$(dirname "$0")/../lib.sh"
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
-        rocmBaseSetup
         TmpDir=$(mktemp -d)
         rlRun "cd $TmpDir" 0 "Enter temporary directory"
     rlPhaseEnd

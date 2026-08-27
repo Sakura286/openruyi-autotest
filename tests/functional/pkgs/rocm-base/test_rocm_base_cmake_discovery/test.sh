@@ -2,11 +2,9 @@
 # Functional test: discover ROCm packages with CMake.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
-. "$(dirname "$0")/../lib.sh"
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
-        rocmBaseSetup
         TmpDir=$(mktemp -d)
         rlRun "cp $(dirname "$0")/CMakeLists.txt $TmpDir/" 0 "Copy CMakeLists.txt"
         rlRun "cd $TmpDir" 0

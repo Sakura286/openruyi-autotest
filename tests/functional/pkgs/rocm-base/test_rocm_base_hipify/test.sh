@@ -2,11 +2,9 @@
 # Functional test: translate CUDA APIs with HIPIFY.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
-. "$(dirname "$0")/../lib.sh"
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
-        rocmBaseSetup
         TmpDir=$(mktemp -d)
         rlRun "cd $TmpDir" 0 "Enter temporary directory"
         rlRun "printf '%s\\n' 'void f(int *a, const cudaDeviceProp *b) { cudaChooseDevice(a,b); }' > hipify-input.cu" 0 \

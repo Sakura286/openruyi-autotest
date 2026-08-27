@@ -6,7 +6,6 @@
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
-        rocmBaseSetup
         rlLogInfo "Architecture: $(uname -m)"
         rlLogInfo "Kernel: $(uname -r)"
     rlPhaseEnd
@@ -19,7 +18,6 @@ rlJournalStart
     rlPhaseEnd
 
     rlPhaseStartCleanup "Clean up test environment"
-        # ROCm base packages managed by lib.sh's reference counting auto-uninstall
     rlPhaseEnd
 
     rlJournalPrintText

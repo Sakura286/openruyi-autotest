@@ -2,11 +2,9 @@
 # Query one AMD GPU with rocm-smi.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
-. "$(dirname "$0")/../lib.sh"
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
-        rocmGpuSetup
         TmpDir=$(mktemp -d)
         rlRun "cd $TmpDir" 0
         rlRun "test -r /dev/kfd && test -w /dev/kfd" 0 "Check KFD access"

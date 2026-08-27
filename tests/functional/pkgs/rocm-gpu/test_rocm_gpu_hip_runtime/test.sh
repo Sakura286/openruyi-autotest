@@ -2,11 +2,9 @@
 # Compile and run a HIP vector add on one AMD GPU.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
-. "$(dirname "$0")/../lib.sh"
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
-        rocmGpuSetup
         TmpDir=$(mktemp -d)
         rlRun "cp $(dirname "$0")/vector_add.cpp $TmpDir/" 0 \
             "Copy HIP source"
