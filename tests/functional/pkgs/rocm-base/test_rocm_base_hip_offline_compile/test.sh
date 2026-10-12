@@ -2,11 +2,25 @@
 # Functional test: compile HIP code without a GPU.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
+. "$(dirname "$0")/../lib.sh"
 
 GPU_ARCHITECTURES=(gfx1100 gfx1201)
 
+ROCM_BASE_TEST_PACKAGES=(
+    gcc-c++
+    hipcc
+    rocm-device-libs
+    rocm-comgr
+    rocm-comgr-devel
+    rocr-runtime
+    rocr-runtime-devel
+    rocm-hip
+    rocm-hip-devel
+)
+
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
+        rlRun "rocmBaseSetup \"\${ROCM_BASE_TEST_PACKAGES[@]}\"" 0 "Install ROCm packages"
         TmpDir=$(mktemp -d)
         rlRun "cp $(dirname "$0")/vector_add.cpp $TmpDir/" 0 "Copy vector_add.cpp"
         rlRun "cd $TmpDir" 0 "Enter temporary directory"

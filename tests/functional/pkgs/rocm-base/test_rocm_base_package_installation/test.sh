@@ -6,6 +6,7 @@
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
+        rlRun "rocmBaseSetup \"\${ROCM_BASE_PACKAGES[@]}\"" 0 "Install ROCm packages"
         rlLogInfo "Architecture: $(uname -m)"
         rlLogInfo "Kernel: $(uname -r)"
     rlPhaseEnd

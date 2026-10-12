@@ -2,9 +2,15 @@
 # Discover one AMD GPU agent with rocminfo.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
+. "$(dirname "$0")/../lib.sh"
+
+ROCM_GPU_TEST_PACKAGES=(
+    rocminfo
+)
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
+        rlRun "rocmGpuSetup \"\${ROCM_GPU_TEST_PACKAGES[@]}\"" 0 "Install ROCm packages"
         TmpDir=$(mktemp -d)
         rlRun "cd $TmpDir" 0
         rlRun "test -r /dev/kfd && test -w /dev/kfd" 0 "Check KFD access"

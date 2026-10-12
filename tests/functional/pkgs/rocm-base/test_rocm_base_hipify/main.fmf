@@ -8,7 +8,6 @@ duration: 2m
 tier: 1
 path: /tests/functional/pkgs/rocm-base/test_rocm_base_hipify
 require:
-  - hipify
   - coreutils
   - grep
   - beakerlib

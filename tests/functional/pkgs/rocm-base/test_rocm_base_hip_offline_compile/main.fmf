@@ -8,18 +8,9 @@ duration: 10m
 tier: 1
 path: /tests/functional/pkgs/rocm-base/test_rocm_base_hip_offline_compile
 require:
-  - gcc-c++
   - file
   - binutils
   - gawk
-  - hipcc
-  - rocm-device-libs
-  - rocm-comgr
-  - rocm-comgr-devel
-  - rocr-runtime
-  - rocr-runtime-devel
-  - rocm-hip
-  - rocm-hip-devel
   - coreutils
   - glibc
   - grep

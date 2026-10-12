@@ -2,9 +2,15 @@
 # Functional test: validate GPU-independent Tensile tools.
 
 . /usr/share/beakerlib/beakerlib.sh || exit 1
+. "$(dirname "$0")/../lib.sh"
+
+ROCM_BASE_TEST_PACKAGES=(
+    python-tensile
+)
 
 rlJournalStart
     rlPhaseStartSetup "Environment setup"
+        rlRun "rocmBaseSetup \"\${ROCM_BASE_TEST_PACKAGES[@]}\"" 0 "Install ROCm packages"
         TmpDir=$(mktemp -d)
         rlRun "cd $TmpDir" 0 "Enter temporary directory"
     rlPhaseEnd

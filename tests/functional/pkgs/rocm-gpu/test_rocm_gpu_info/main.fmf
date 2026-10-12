@@ -9,7 +9,6 @@ duration: 2m
 tier: 1
 path: /tests/functional/pkgs/rocm-gpu/test_rocm_gpu_info
 require:
-  - rocminfo
   - coreutils
   - gawk
   - grep
