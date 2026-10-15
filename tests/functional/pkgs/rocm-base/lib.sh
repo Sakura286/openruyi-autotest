@@ -16,40 +16,6 @@
 ROCM_BASE_FLAG="/tmp/.beakerlib_rocm_base_suite"
 ROCM_BASE_LOCK="${ROCM_BASE_FLAG}.lock"
 
-ROCM_BASE_PACKAGES=(
-    gcc-c++
-    cmake
-    pciutils
-    rocm-cmake
-    hipcc
-    rocm-device-libs
-    rocm-comgr
-    rocm-comgr-devel
-    rocm-llvm-macros
-    rocr-runtime
-    rocr-runtime-devel
-    rocm-hip
-    rocm-hip-devel
-    rocminfo
-    rocm-smi
-    rocm-smi-devel
-    rocprofiler-register
-    rocprofiler-register-devel
-    rocblas
-    rocblas-devel
-    hipblas-common-devel
-    hipblas
-    hipblas-devel
-    rocsolver
-    rocsolver-devel
-    rocsparse
-    rocsparse-devel
-    rocprim-devel
-    hipify
-    rocm-bandwidth-test
-    python-tensile
-)
-
 rocmBaseRoot() {
     if [ "$(id -u)" -eq 0 ]; then
         "$@"

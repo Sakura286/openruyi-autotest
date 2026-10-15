@@ -8,7 +8,6 @@ duration: 10m
 tier: 1
 path: /tests/functional/pkgs/rocm-base/test_rocm_base_hip_offline_compile
 require:
-  - file
   - binutils
   - gawk
   - coreutils

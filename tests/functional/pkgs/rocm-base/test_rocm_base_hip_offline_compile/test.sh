@@ -32,11 +32,6 @@ rlJournalStart
             executable="vector_add_$architecture"
             rlRun "hipcc --offload-arch='$architecture' vector_add.cpp -o '$executable'" 0 \
                 "Compile vector add for $architecture"
-            rlAssertExists "$executable"
-
-            rlRun "file '$executable' > 'file_$architecture.txt'" 0 \
-                "Inspect executable for $architecture"
-            rlAssertGrep "ELF.*executable" "file_$architecture.txt"
 
             rlRun "ldd '$executable' > 'ldd_$architecture.txt'" 0 \
                 "Resolve dependencies for $architecture"

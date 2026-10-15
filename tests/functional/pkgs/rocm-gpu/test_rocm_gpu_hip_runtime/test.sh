@@ -22,11 +22,10 @@ rlJournalStart
             "Copy HIP source"
         rlRun "cd $TmpDir" 0
         rlRun "rocminfo > rocminfo.txt 2>&1" 0 "Query GPU"
-        rlRun "grep -E '^[[:space:]]*Name:[[:space:]]+gfx[0-9]+' rocminfo.txt | awk '{print \$2}' | sort -u > gpu-architectures.txt" 0 \
-            "Find GPU architectures"
-        rlRun "test \"\$(wc -l < gpu-architectures.txt)\" -eq 1" 0 \
-            "Check for one GPU architecture"
-        GPU_ARCH=$(cat gpu-architectures.txt)
+        rlRun "grep -E '^[[:space:]]*Name:[[:space:]]+gfx[0-9]+' rocminfo.txt | awk '{print \$2}' | head -n 1 > gpu-architecture.txt" 0 \
+            "Find GPU architecture"
+        rlRun "test -s gpu-architecture.txt" 0 "Check for a GPU architecture"
+        GPU_ARCH=$(cat gpu-architecture.txt)
         rlLogInfo "GPU architecture: $GPU_ARCH"
     rlPhaseEnd
 

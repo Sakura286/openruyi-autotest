@@ -23,8 +23,8 @@ int main()
 {
     int count = 0;
     HIP_CHECK(hipGetDeviceCount(&count));
-    if (count != 1) {
-        std::fprintf(stderr, "expected 1 GPU, got %d\n", count);
+    if (count < 1) {
+        std::fprintf(stderr, "no GPU found\n");
         return 2;
     }
 

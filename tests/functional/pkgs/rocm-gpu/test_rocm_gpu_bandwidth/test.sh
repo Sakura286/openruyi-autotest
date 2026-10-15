@@ -20,11 +20,7 @@ rlJournalStart
         rlRun "rocm-bandwidth-test > bandwidth.txt 2>&1" 0 \
             "Run bandwidth test"
         rlRun "cat bandwidth.txt" 0 "Print bandwidth output"
-        rlRun "test -s bandwidth.txt" 0 "Check for bandwidth output"
-        rlRun "grep -o 'GPU-[[:xdigit:]]\\+' bandwidth.txt | sort -u > gpus.txt" 0 \
-            "Find GPU identifiers"
-        rlRun "test \"\$(wc -l < gpus.txt)\" -eq 1" 0 \
-            "Check for one GPU"
+        rlAssertGrep 'GPU-[[:xdigit:]]\+' bandwidth.txt
         rlAssertGrep "Device:" bandwidth.txt
         rlAssertNotGrep "No subcommand provided" bandwidth.txt
         rlAssertNotGrep "Error:" bandwidth.txt

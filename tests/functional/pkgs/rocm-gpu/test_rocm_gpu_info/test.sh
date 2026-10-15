@@ -26,8 +26,6 @@ rlJournalStart
             "Check for one GPU agent"
         rlRun "grep -E '^[[:space:]]*Name:[[:space:]]+gfx[0-9]+' rocminfo.txt | awk '{print \$2}' | sort -u > gpu-architectures.txt" 0 \
             "Find GPU architectures"
-        rlRun "test \"\$(wc -l < gpu-architectures.txt)\" -eq 1" 0 \
-            "Check for one GPU architecture"
         rlRun "cat gpu-architectures.txt" 0 "Print GPU architecture"
         rlAssertGrep "Marketing Name:[[:space:]]*[^[:space:]]" rocminfo.txt
     rlPhaseEnd

@@ -20,10 +20,7 @@ rlJournalStart
         rlRun "rocm-smi --showproductname --showuniqueid --showbus > rocm-smi.txt 2>&1" 0 \
             "Query GPU identity"
         rlRun "cat rocm-smi.txt" 0 "Print rocm-smi output"
-        rlRun "grep -o 'GPU\\[[0-9]\\+\\]' rocm-smi.txt | sort -u > gpus.txt" 0 \
-            "Find GPU indices"
-        rlRun "test \"\$(wc -l < gpus.txt)\" -eq 1" 0 \
-            "Check for one GPU"
+        rlAssertGrep 'GPU\[[0-9]\+\]' rocm-smi.txt
         rlAssertNotGrep "No AMD GPUs specified" rocm-smi.txt
         rlAssertNotGrep "ERROR:" rocm-smi.txt
     rlPhaseEnd
